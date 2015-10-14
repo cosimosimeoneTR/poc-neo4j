@@ -12,7 +12,7 @@ v_companyNum = 1000
 v_drugNum = 3000000
 v_sparseRnd1 = 1000
 v_sparseRnd2 = 200
-v_trialNum = 100
+v_trialNum = 10000000
 
 
 def printAttribs( p_attribNum ):
@@ -43,21 +43,21 @@ for drugId in range(0,v_drugNum-1):
 fileOut.close()
 
 
-#
-#fileOut = open('DONTBACKUP/trials.csv', 'wb')
-#fileOut.write('id:ID(Trial),:LABEL'+printAttribs ( v_attribNum ) +'\n')
-#for trialId in range(0,v_trialNum-1):
-#  fileOut.write(str(trialId)+',trial_'+str(drugId)+printAttribs ( v_attribNum ) +'\n')
-#fileOut.close()
-#
-#
-#fileOut = open('DONTBACKUP/trialsdrugs.csv', 'wb')
-#fileOut.write(':START_ID(Trial),:END_ID(Drug),:TYPE,code'+printAttribs ( v_attribNum ) +'\n')
-#for trialId in range(0,v_trialNum):
-#  myString=""
-#  myString=myString+str(trialId)+','+str(random.randint(1, v_sparseRnd1))+',RELATED_TO,1'+printAttribs ( v_attribNum ) +'\n'
-#  myString=myString+str(trialId)+','+str(random.randint(1, v_sparseRnd2))+',RELATED_TO,2'+printAttribs ( v_attribNum ) +'\n'
-#  myString=myString+str(trialId)+','+str(random.randint(1, v_drugNum   ))+',RELATED_TO,3'+printAttribs ( v_attribNum ) +'\n')
-#  fileOut.write(myString)
-#fileOut.close()
-#
+
+fileOut = open('DONTBACKUP/trials.csv', 'wb')
+fileOut.write('id:ID(Trial),:LABEL,trialName'+printAttribs ( v_attribNum ) +'\n')
+for trialId in range(0,v_trialNum-1):
+  fileOut.write(str(trialId)+',trial,trial_'+str(drugId)+printAttribs ( v_attribNum ) +'\n')
+fileOut.close()
+
+
+fileOut = open('DONTBACKUP/trialsdrugs.csv', 'wb')
+fileOut.write(':START_ID(Trial),:END_ID(Drug),:TYPE,code'+printAttribs ( v_attribNum ) +'\n')
+for trialId in range(0,v_trialNum):
+  myString=""
+  myString=myString+str(trialId)+','+str(random.randint(1, v_sparseRnd1))+',RELATED_TO,1'+printAttribs ( v_attribNum ) +'\n'
+  myString=myString+str(trialId)+','+str(random.randint(1, v_sparseRnd2))+',RELATED_TO,2'+printAttribs ( v_attribNum ) +'\n'
+  myString=myString+str(trialId)+','+str(random.randint(1, v_drugNum   ))+',RELATED_TO,3'+printAttribs ( v_attribNum ) +'\n'
+  fileOut.write(myString)
+fileOut.close()
+
