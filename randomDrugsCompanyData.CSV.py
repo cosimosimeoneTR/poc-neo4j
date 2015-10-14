@@ -8,9 +8,9 @@ import pickle
 
 v_attribNum = 10
 
-v_companyNum = 100
-v_drugNum = 25000
-v_sparseRnd1 = 100
+v_companyNum = 1000
+v_drugNum = 3000000
+v_sparseRnd1 = 1000
 v_sparseRnd2 = 200
 v_trialNum = 100
 
