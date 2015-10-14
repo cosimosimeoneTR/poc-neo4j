@@ -39,7 +39,7 @@ fileOut.close()
 fileOut = open('DONTBACKUP/companiesdrugs.csv', 'wb')
 fileOut.write(':START_ID(Company),:END_ID(Drug),:TYPE'+printAttribs ( 5 ) +'\n')
 for drugId in range(0,v_drugNum-1):
-  fileOut.write(str(drugId%v_companyNum)+','+str(drugId)+',PRODUCES'+printAttribs ( 5 ) +'\n')
+  fileOut.write(str(drugId%(v_companyNum-1))+','+str(drugId)+',PRODUCES'+printAttribs ( 5 ) +'\n')
 fileOut.close()
 
 
