@@ -8,10 +8,10 @@ import pickle
 
 v_attribNum = 10
 
-v_companyNum = 10
-v_drugNum = 250
-v_sparseRnd1 = 10
-v_sparseRnd2 = 30
+v_companyNum = 1000
+v_drugNum = 250000
+v_sparseRnd1 = 100
+v_sparseRnd2 = 300
 v_trialNum = 100
 
 
@@ -24,7 +24,7 @@ def printAttribs( p_attribNum ):
 
 fileOut = open('DONTBACKUP/drugs.csv', 'wb')
 fileOut.write('id:ID(Drug),:LABEL'+printAttribs ( v_attribNum ) +'\n')
-for drugId in range(0,v_drugNum+1):
+for drugId in range(0,v_drugNum-1):
   fileOut.write(str(drugId)+',Drg_'+str(drugId)+printAttribs ( v_attribNum ) +'\n')
 fileOut.close()
 
@@ -32,21 +32,21 @@ fileOut.close()
 
 fileOut = open('DONTBACKUP/companies.csv', 'wb')
 fileOut.write('id:ID(Company),:LABEL'+printAttribs ( v_attribNum ) +'\n')
-for companyId in range(0,v_companyNum+1):
+for companyId in range(0,v_companyNum-1):
   fileOut.write(str(companyId)+',Cmp_'+str(companyId)+printAttribs ( v_attribNum ) +'\n')
 fileOut.close()
 
 fileOut = open('DONTBACKUP/companiesdrugs.csv', 'wb')
-fileOut.write(':START_ID(Company),:END_ID(Drug),:TYPE'+printAttribs ( v_attribNum ) +'\n')
-for drugId in range(0,v_drugNum):
-  fileOut.write(str(companyId)+','+str(drugId%v_companyNum)+',PRODUCES'+printAttribs ( v_attribNum ) +'\n')
+fileOut.write(':START_ID(Company),:END_ID(Drug),:TYPE'+printAttribs ( 5 ) +'\n')
+for drugId in range(0,v_drugNum-1):
+  fileOut.write(str(companyId)+','+str(drugId%v_companyNum)+',PRODUCES'+printAttribs ( 5 ) +'\n')
 fileOut.close()
 
 
 #
 #fileOut = open('DONTBACKUP/trials.csv', 'wb')
 #fileOut.write('id:ID(Trial),:LABEL'+printAttribs ( v_attribNum ) +'\n')
-#for trialId in range(0,v_trialNum+1):
+#for trialId in range(0,v_trialNum-1):
 #  fileOut.write(str(trialId)+',trial_'+str(drugId)+printAttribs ( v_attribNum ) +'\n')
 #fileOut.close()
 #
