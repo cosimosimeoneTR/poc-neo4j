@@ -8,11 +8,11 @@ import pickle
 
 v_attribNum = 10
 
-v_companyNum = 1000
-v_drugNum = 3000000
-v_sparseRnd1 = 1000
+v_companyNum = 100
+v_drugNum = 30000
+v_sparseRnd1 = 100
 v_sparseRnd2 = 200
-v_trialNum = 1000000
+v_trialNum = 1000
 
 
 def printAttribs( p_attribNum ):
@@ -39,7 +39,7 @@ fileOut.close()
 fileOut = open('DONTBACKUP/companiesdrugs.csv', 'wb')
 fileOut.write(':START_ID(Company),:END_ID(Drug),:TYPE'+printAttribs ( 5 ) +'\n')
 for drugId in range(0,v_drugNum-1):
-  fileOut.write(str(companyId)+','+str(drugId%v_companyNum)+',PRODUCES'+printAttribs ( 5 ) +'\n')
+  fileOut.write(str(drugId%v_companyNum)+','+str(drugId)+',PRODUCES'+printAttribs ( 5 ) +'\n')
 fileOut.close()
 
 
