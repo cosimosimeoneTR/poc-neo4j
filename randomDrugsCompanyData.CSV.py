@@ -8,7 +8,7 @@ import pickle
 import string
 
 v_attribNum = 10
-v_writeCommit = 1000
+v_writeCommit = 100000
 
 v_companyNum = 1000
 v_drugNum = 3000000
