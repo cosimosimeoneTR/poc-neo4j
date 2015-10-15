@@ -83,7 +83,7 @@ fileOut.write(':START_ID(Trial),:END_ID(Drug),:TYPE,code'+printAttribsHead ( v_a
 for trialId in range(0,v_trialNum-1):
   myString=myString+str(trialId)+','+str(random.randint(1, v_sparseRnd1))+',RELATED_TO,1'+printAttribsCnt ( v_attribNum ) +'\n'
   myString=myString+str(trialId)+','+str(random.randint(1, v_sparseRnd2))+',RELATED_TO,2'+printAttribsCnt ( v_attribNum ) +'\n'
-  myString=myString+str(trialId)+','+str(random.randint(1, v_drugNum   ))+',RELATED_TO,3'+printAttribsCnt ( v_attribNum ) +'\n'
+  myString=myString+str(trialId)+','+str(random.randint(1, v_drugNum -1  ))+',RELATED_TO,3'+printAttribsCnt ( v_attribNum ) +'\n'
   if trialId % v_writeCommit:
     fileOut.write(myString)
     myString=""
