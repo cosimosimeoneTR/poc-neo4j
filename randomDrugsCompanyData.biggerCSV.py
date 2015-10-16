@@ -10,12 +10,12 @@ import string
 v_attribNum = 10
 v_writeCommit = 500000
 
-v_companyNum = 1000
-v_drugNum = 3000000
-v_sparseRnd1 = 100
-v_sparseRnd2 = 200
-v_trialNum = 1000000
-v_diseaseNum = 10000000
+v_companyNum = 10
+v_drugNum = 30000
+v_sparseRnd1 = 1
+v_sparseRnd2 = 2
+v_trialNum = 10000
+v_diseaseNum = 100000
 
 
 def printAttribsHead( p_attribNum ):
@@ -119,7 +119,7 @@ fileOut.close()
 
 myString=""
 fileOut = open('DONTBACKUP/drugsdiseases.csv', 'wb')
-fileOut.write(':START_ID(Drug),:END_ID(Drug),:TYPE,relationType'+printAttribsHead ( v_attribNum ) +'\n')
+fileOut.write(':START_ID(Drug),:END_ID(Disease),:TYPE,relationType'+printAttribsHead ( v_attribNum ) +'\n')
 for drugId in range(0,v_drugNum-1):
   myString=myString+(str(drugId)+','+str(random.randint(1, v_diseaseNum))+',RELATESTO,relation1'+printAttribsCnt ( v_attribNum ) +'\n')
   myString=myString+(str(drugId)+','+str(random.randint(1, v_diseaseNum))+',RELATESTO,relation2'+printAttribsCnt ( v_attribNum ) +'\n')
