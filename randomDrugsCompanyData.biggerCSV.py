@@ -10,12 +10,12 @@ import string
 v_attribNum = 5
 v_writeCommit = 500000
 
-v_companyNum = 1000
-v_drugNum = 3000000
-v_sparseRnd1 = 100
-v_sparseRnd2 = 200
-v_trialNum = 1000000
-v_diseaseNum = 4000000
+v_companyNum = 100
+v_drugNum = 300000
+v_sparseRnd1 = 10
+v_sparseRnd2 = 20
+v_trialNum = 100000
+v_diseaseNum = 400000
 
 
 def printAttribsHead( p_attribNum ):
@@ -84,7 +84,7 @@ fileOut.write(':START_ID(Trial),:END_ID(Drug),:TYPE'+printAttribsHead ( v_attrib
 for trialId in range(0,v_trialNum-1):
   myString=myString+str(trialId)+','+str(random.randint(1, v_sparseRnd1))+',RELATED_TO1'+printAttribsCnt ( v_attribNum ) +'\n'
   myString=myString+str(trialId)+','+str(random.randint(1, v_sparseRnd2))+',RELATED_TO2'+printAttribsCnt ( v_attribNum ) +'\n'
-  myString=myString+str(trialId)+','+str(random.randint(1, v_drugNum -1  ))+',RELATED_TO3'+printAttribsCnt ( v_attribNum ) +'\n'
+  myString=myString+str(trialId)+','+str(random.randint(1, v_drugNum -2  ))+',RELATED_TO3'+printAttribsCnt ( v_attribNum ) +'\n'
   if trialId % v_writeCommit:
     fileOut.write(myString)
     myString=""
