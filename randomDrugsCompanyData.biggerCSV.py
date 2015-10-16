@@ -96,7 +96,7 @@ myString=""
 fileOut = open('DONTBACKUP/drugsdrugs.csv', 'wb')
 fileOut.write(':START_ID(Drug),:END_ID(Drug),:TYPE'+printAttribsHead ( v_attribNum ) +'\n')
 for drugId in range(0,v_drugNum-1):
-  myString=myString+(str(drugId)+','+str(random.randint(1, v_sparseRnd1))+',WHATEVER'+printAttribsCnt ( v_attribNum ) +'\n')
+  myString=myString+(str(drugId)+','+str(random.randint(1, v_sparseRnd1))+',DRUG2DRUG'+printAttribsCnt ( v_attribNum ) +'\n')
   if drugId % v_writeCommit:
     fileOut.write(myString)
     myString=""
@@ -121,9 +121,9 @@ myString=""
 fileOut = open('DONTBACKUP/drugsdiseases.csv', 'wb')
 fileOut.write(':START_ID(Drug),:END_ID(Disease),:TYPE,relationType'+printAttribsHead ( v_attribNum ) +'\n')
 for drugId in range(0,v_drugNum-1):
-  myString=myString+(str(drugId)+','+str(random.randint(1, v_diseaseNum))+',RELATESTO,relation1'+printAttribsCnt ( v_attribNum ) +'\n')
-  myString=myString+(str(drugId)+','+str(random.randint(1, v_diseaseNum))+',RELATESTO,relation2'+printAttribsCnt ( v_attribNum ) +'\n')
-  myString=myString+(str(drugId)+','+str(random.randint(1, v_diseaseNum))+',RELATESTO,relation3'+printAttribsCnt ( v_attribNum ) +'\n')
+  myString=myString+(str(drugId)+','+str(random.randint(1, v_diseaseNum))+',RELATES_TO,relation1'+printAttribsCnt ( v_attribNum ) +'\n')
+  myString=myString+(str(drugId)+','+str(random.randint(1, v_diseaseNum))+',RELATES_TO,relation2'+printAttribsCnt ( v_attribNum ) +'\n')
+  myString=myString+(str(drugId)+','+str(random.randint(1, v_diseaseNum))+',RELATES_TO,relation3'+printAttribsCnt ( v_attribNum ) +'\n')
   if drugId % v_writeCommit:
     fileOut.write(myString)
     myString=""
