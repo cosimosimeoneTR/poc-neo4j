@@ -7,15 +7,15 @@ import json
 import pickle
 import string
 
-v_attribNum = 10
+v_attribNum = 5
 v_writeCommit = 500000
 
-v_companyNum = 10
-v_drugNum = 30000
-v_sparseRnd1 = 1
-v_sparseRnd2 = 2
-v_trialNum = 10000
-v_diseaseNum = 100000
+v_companyNum = 1000
+v_drugNum = 3000000
+v_sparseRnd1 = 100
+v_sparseRnd2 = 200
+v_trialNum = 1000000
+v_diseaseNum = 4000000
 
 
 def printAttribsHead( p_attribNum ):
