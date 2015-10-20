@@ -1,9 +1,9 @@
 sudo rm -rf DONTBACKUP/load-test && \
-time neo4j-import --into DONTBACKUP/load-test  --id-type INTEGER  \
-  --nodes DONTBACKUP/companies.csv --nodes DONTBACKUP/drugs.csv --nodes DONTBACKUP/trials.csv \
-  --nodes DONTBACKUP/diseases.csv   \
-  --relationships DONTBACKUP/companiesdrugs.csv --relationships DONTBACKUP/trialsdrugs.csv    \
-  --relationships DONTBACKUP/drugsdiseases.csv  --relationships DONTBACKUP/drugsdrugs.csv
+neo4j-import --into DONTBACKUP/load-test  --id-type INTEGER  \
+  --nodes DONTBACKUP/companies.csv.gz --nodes DONTBACKUP/drugs.csv.gz --nodes DONTBACKUP/trials.csv.gz \
+  --nodes DONTBACKUP/diseases.csv.gz   \
+  --relationships DONTBACKUP/companiesdrugs.csv.gz --relationships DONTBACKUP/trialsdrugs.csv.gz    \
+  --relationships DONTBACKUP/drugsdiseases.csv.gz  --relationships DONTBACKUP/drugsdrugs.csv.gz
 
 
 
