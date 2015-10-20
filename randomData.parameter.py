@@ -32,7 +32,7 @@ def printAttribsCnt ( p_attribNum ):
     retVal = retVal+',attr'+str(attribId)+str(''.join(random.choice(string.lowercase) for i in range(10)) )
   return retVal
 
-if whatToSpool = 'drugs':
+if whatToSpool == 'drugs':
   myString=""
   fileOut = gzip.open('DONTBACKUP/drugs.csv.gz', 'wb')
   fileOut.write('id:ID(Drug),:LABEL,drugName'+printAttribsHead ( v_attribNum ) +'\n')
@@ -45,7 +45,7 @@ if whatToSpool = 'drugs':
   fileOut.close()
 
 
-if whatToSpool = 'companies':
+if whatToSpool == 'companies':
   myString=""
   fileOut = gzip.open('DONTBACKUP/companies.csv.gz', 'wb')
   fileOut.write('id:ID(Company),:LABEL,companyName'+printAttribsHead ( v_attribNum ) +'\n')
@@ -58,7 +58,7 @@ if whatToSpool = 'companies':
   fileOut.close()
 
 
-if whatToSpool = 'companiesdrugs':
+if whatToSpool == 'companiesdrugs':
   myString=""
   fileOut = gzip.open('DONTBACKUP/companiesdrugs.csv.gz', 'wb')
   fileOut.write(':START_ID(Company),:END_ID(Drug),:TYPE'+printAttribsHead ( 5 ) +'\n')
@@ -71,7 +71,7 @@ if whatToSpool = 'companiesdrugs':
   fileOut.close()
 
 
-if whatToSpool = 'trials':
+if whatToSpool == 'trials':
   myString=""
   fileOut = gzip.open('DONTBACKUP/trials.csv.gz', 'wb')
   fileOut.write('id:ID(Trial),:LABEL,trialName'+printAttribsHead ( v_attribNum ) +'\n')
@@ -84,7 +84,7 @@ if whatToSpool = 'trials':
   fileOut.close()
 
 
-if whatToSpool = 'trialsdrugs':
+if whatToSpool == 'trialsdrugs':
   myString=""
   fileOut = gzip.open('DONTBACKUP/trialsdrugs.csv.gz', 'wb')
   fileOut.write(':START_ID(Trial),:END_ID(Drug),:TYPE'+printAttribsHead ( v_attribNum ) +'\n')
@@ -99,7 +99,7 @@ if whatToSpool = 'trialsdrugs':
   fileOut.close()
 
 
-if whatToSpool = 'drugsdrugs':
+if whatToSpool == 'drugsdrugs':
   myString=""
   fileOut = gzip.open('DONTBACKUP/drugsdrugs.csv.gz', 'wb')
   fileOut.write(':START_ID(Drug),:END_ID(Drug),:TYPE'+printAttribsHead ( v_attribNum ) +'\n')
@@ -112,7 +112,7 @@ if whatToSpool = 'drugsdrugs':
   fileOut.close()
 
 
-if whatToSpool = 'diseases':
+if whatToSpool == 'diseases':
   myString=""
   fileOut = gzip.open('DONTBACKUP/diseases.csv.gz', 'wb')
   fileOut.write('id:ID(Disease),:LABEL,DiseaseName'+printAttribsHead ( v_attribNum ) +'\n')
@@ -125,7 +125,7 @@ if whatToSpool = 'diseases':
   fileOut.close()
 
 
-if whatToSpool = 'drugsdiseases':
+if whatToSpool == 'drugsdiseases':
   myString=""
   fileOut = gzip.open('DONTBACKUP/drugsdiseases.csv.gz', 'wb')
   fileOut.write(':START_ID(Drug),:END_ID(Disease),:TYPE,relationType'+printAttribsHead ( v_attribNum ) +'\n')
