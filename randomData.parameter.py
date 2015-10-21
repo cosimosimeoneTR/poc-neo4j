@@ -9,7 +9,7 @@ import string
 import gzip
 
 v_attribNum = 5
-v_writeCommit = 500000
+v_writeCommit = 700000
 
 v_companyNum =    1000000
 v_drugNum =      30000000
