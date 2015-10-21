@@ -15,7 +15,7 @@ v_companyNum =    1000000
 v_drugNum =      30000000
 v_sparseRnd1 =       1000
 v_sparseRnd2 =       5000
-v_trialNum =    100000000
+v_trialNum =     70000000
 v_diseaseNum =   40000000
 
 whatToSpool = sys.argv[1]
