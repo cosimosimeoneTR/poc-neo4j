@@ -1,4 +1,4 @@
-sudo rm -rf DONTBACKUP/load-test/* && \
+sudo rm -rf DONTBACKUP/load-test/db/* && \
 ./randomData.parameter_ALL.sh >/dev/null 2>&1 && \
 for file in `ls DONTBACKUP/*csv.gz`;do echo $file `zcat $file | wc -l`; done;echo ;echo  && \
 ./neo4jImport.biggerCSV.sh && \

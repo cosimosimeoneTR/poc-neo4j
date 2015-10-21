@@ -1,4 +1,4 @@
-sudo rm -rf DONTBACKUP/load-test/* && \
+sudo rm -rf DONTBACKUP/load-test/db/* && \
 ./randomData.CSV.py && \
 for file in `ls DONTBACKUP/*csv.gz`;do echo $file `zcat $file | wc -l`; done;echo ;echo  && \
 ./neo4jImport.sh && \
