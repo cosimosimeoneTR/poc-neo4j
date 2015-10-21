@@ -1,5 +1,5 @@
 sudo rm -rf DONTBACKUP/load-test/* && \
-./randomData.parameter_ALL.sh && \
+./randomData.parameter_ALL.sh >/dev/null 2>&1 && \
 for file in `ls DONTBACKUP/*csv.gz`;do echo $file `zcat $file | wc -l`; done;echo ;echo  && \
 ./neo4jImport.biggerCSV.sh && \
 echo ;echo "Restarting neo4jserver..." && \
