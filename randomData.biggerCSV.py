@@ -11,12 +11,12 @@ import gzip
 v_attribNum = 5
 v_writeCommit = 500000
 
-v_companyNum = 10000
-v_drugNum = 3000000
-v_sparseRnd1 = 100
-v_sparseRnd2 = 500
-v_trialNum = 10000000
-v_diseaseNum = 4000000
+v_companyNum =    10000
+v_drugNum =     3000000
+v_sparseRnd1 =      100
+v_sparseRnd2 =      500
+v_trialNum =   10000000
+v_diseaseNum =  4000000
 
 
 def printAttribsHead( p_attribNum ):
