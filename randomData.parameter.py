@@ -11,12 +11,12 @@ import gzip
 v_attribNum = 5
 v_writeCommit = 500000
 
-v_companyNum = 1000000
-v_drugNum = 30000000
-v_sparseRnd1 = 1000
-v_sparseRnd2 = 5000
-v_trialNum = 100000000
-v_diseaseNum = 40000000
+v_companyNum = 10
+v_drugNum = 30
+v_sparseRnd1 = 1
+v_sparseRnd2 = 5
+v_trialNum = 100
+v_diseaseNum = 40
 
 whatToSpool = sys.argv[1]
 
@@ -76,7 +76,7 @@ if whatToSpool == 'trials':
   fileOut = gzip.open('DONTBACKUP/trials.csv.gz', 'wb')
   fileOut.write('id:ID(Trial),:LABEL,trialName'+printAttribsHead ( v_attribNum ) +'\n')
   for trialId in range(0,v_trialNum-1):
-    myString=myString+(str(trialId)+',trial,trial_'+str(drugId)+printAttribsCnt ( v_attribNum ) +'\n')
+    myString=myString+(str(trialId)+',trial,trial_'+str(trialId)+printAttribsCnt ( v_attribNum ) +'\n')
     if trialId % v_writeCommit:
       fileOut.write(myString)
       myString=""
@@ -118,7 +118,7 @@ if whatToSpool == 'diseases':
   fileOut.write('id:ID(Disease),:LABEL,DiseaseName'+printAttribsHead ( v_attribNum ) +'\n')
   for v_diseaseNum in range(0,v_diseaseNum-1):
     myString=myString+(str(v_diseaseNum)+',Disease,Dis_'+str(v_diseaseNum)+printAttribsCnt ( v_attribNum ) +'\n')
-    if trialId % v_writeCommit:
+    if v_diseaseNum % v_writeCommit:
       fileOut.write(myString)
       myString=""
   fileOut.write(myString)

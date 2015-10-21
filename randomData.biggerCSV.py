@@ -111,7 +111,7 @@ fileOut = gzip.open('DONTBACKUP/diseases.csv.gz', 'wb')
 fileOut.write('id:ID(Disease),:LABEL,DiseaseName'+printAttribsHead ( v_attribNum ) +'\n')
 for v_diseaseNum in range(0,v_diseaseNum-1):
   myString=myString+(str(v_diseaseNum)+',Disease,Dis_'+str(v_diseaseNum)+printAttribsCnt ( v_attribNum ) +'\n')
-  if trialId % v_writeCommit:
+  if v_diseaseNum % v_writeCommit:
     fileOut.write(myString)
     myString=""
 fileOut.write(myString)
