@@ -29,7 +29,8 @@ def printAttribsHead( p_attribNum ):
 def printAttribsCnt ( p_attribNum ):
   retVal = ""
   for attribId in range(0,v_attribNum):
-    retVal = retVal+',attr'+str(attribId)+str(''.join(random.choice(string.lowercase) for i in range(10)) )
+    #retVal = retVal+',attr'+str(attribId)+str(''.join(random.choice(string.lowercase) for i in range(10)) )
+    retVal = retVal+',attr'+str(attribId)+str( random.randint(1, 10) )
   return retVal
 
 if whatToSpool == 'drugs':
