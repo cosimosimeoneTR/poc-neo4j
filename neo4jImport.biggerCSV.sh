@@ -5,6 +5,4 @@ neo4j-import --into DONTBACKUP/load-test/db  --id-type INTEGER  \
   --relationships DONTBACKUP/companiesdrugs.csv.gz --relationships DONTBACKUP/trialsdrugs.csv.gz    \
   --relationships DONTBACKUP/drugsdiseases.csv.gz  --relationships DONTBACKUP/drugsdrugs.csv.gz
 
-
-
-
+sudo chown -R neo4j:nogroup DONTBACKUP/load-test/
