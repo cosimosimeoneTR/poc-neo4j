@@ -1,1 +1,1 @@
-watch -n 3 'ps -ef | grep python|grep -v watch|grep -v grep;echo;ls -lk DONTBACKUP/*csv* ;echo; df -h ; echo; free -m '
+watch -n 3 'curl -s http://instance-data/latest/meta-data/ami-id;echo;curl -s http://instance-data/latest/meta-data/instance-type;echo; curl -s http://instance-data/latest/meta-data/instance-id; echo; ps -ef | grep python|grep -v watch|grep -v grep;echo;ls -lk DONTBACKUP/*csv* ;echo; df -h ; echo; free -m '
