@@ -2,51 +2,51 @@ mkdir /mnt/dataDisk/matrix 2>/dev/null
 
 export pids=""
 
-nohup ./randomData.entities.matrixDb.py  1        1000000   /mnt/dataDisk/matrix/   > `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  A        1000000   /mnt/dataDisk/matrix/   > `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.entities.matrixDb.py  2        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  B        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.entities.matrixDb.py  3        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  C        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.entities.matrixDb.py  4        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  D        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.entities.matrixDb.py  5        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  E        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.entities.matrixDb.py  6        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  F        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.entities.matrixDb.py  7        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  G        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.entities.matrixDb.py  8        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  H        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.entities.matrixDb.py  9        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  I        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.entities.matrixDb.py 10        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.entities.matrixDb.py  J        1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
   
-nohup ./randomData.relations.matrixDb.py  1  10   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  A   J   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py  2   1   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  B   A   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py  3   2   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  C   B   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py  4   3   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  D   C   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py  5   4   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  E   D   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py  6   5   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  F   E   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py  7   6   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  G   F   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py  8   7   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  H   G   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py  9   8   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  I   H   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py 10   9   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  J   I   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
 
-nohup ./randomData.relations.matrixDb.py  2   4   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  B   D   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
-nohup ./randomData.relations.matrixDb.py  4   2   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
+nohup ./randomData.relations.matrixDb.py  D   B   1000000   /mnt/dataDisk/matrix/  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
 
 
