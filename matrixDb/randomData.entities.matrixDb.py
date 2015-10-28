@@ -13,7 +13,8 @@ v_writeCommit = 700000
 
 
 v_entityId  = sys.argv[1]
-v_rowNums = int(sys.argv[2])
+v_rowNums   = int(sys.argv[2])
+v_path      = sys.argv[3]
 
 def printAttribsHead( p_attribNum ):
   retVal = ""
@@ -29,9 +30,9 @@ def printAttribsCnt ( p_attribNum ):
   return retVal
 
 myString=""
-fileOut = gzip.open('entity'+str(v_entityId)+'.csv.gz', 'wb')
+fileOut = gzip.open(v_path+'entity'+str(v_entityId)+'.csv.gz', 'wb')
 fileOut.write('id:ID(entity'+str(v_entityId)+'),:LABEL,entityName'+printAttribsHead ( v_attribNum ) +'\n')
-for loopId in range(0,v_rowNums):
+for loopId in range(1,v_rowNums):
   myString=myString+(str(loopId)+',Entity'+str(v_entityId)+',Ent_'+str(loopId)+printAttribsCnt ( v_attribNum ) +'\n')
   if loopId % v_writeCommit:
     fileOut.write(myString)
