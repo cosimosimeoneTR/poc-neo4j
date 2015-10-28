@@ -31,7 +31,7 @@ def printAttribsCnt ( p_attribNum ):
   return retVal
 
 myString=""
-fileOut = gzip.open(v_path+'entity'+str(v_startEntityId)+'entity'+str(v_endEntityId)+'.csv.gz', 'wb')
+fileOut = gzip.open(v_path+'entity'+str(v_startEntityId)+'2entity'+str(v_endEntityId)+'.csv.gz', 'wb')
 fileOut.write(':START_ID(entity'+str(v_startEntityId)+'),:END_ID(entity'+str(v_endEntityId)+'),:TYPE,relationType'+printAttribsHead ( v_attribNum ) +'\n')
 for loopId in range(1,v_rowNums):
   myString=myString+(str(loopId)+','+str(random.randint(1, v_rowNums))+',ENT'+str(v_startEntityId)+'2ENT'+str(v_endEntityId)+',Relation'+printAttribsCnt ( 5 ) +'\n')
