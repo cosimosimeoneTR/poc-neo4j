@@ -1,0 +1,1 @@
+watch -n 3 'curl -s http://instance-data/latest/meta-data/ami-id;echo;curl -s http://instance-data/latest/meta-data/instance-type;echo; curl -s http://instance-data/latest/meta-data/instance-id; echo; ps -ef | grep python|grep -v watch|grep -v grep;echo;ls -lk /mnt/dataDisk/matrix/*csv* ;echo; df -h ; echo; free -m '
