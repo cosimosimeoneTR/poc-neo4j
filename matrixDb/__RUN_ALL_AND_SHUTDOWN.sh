@@ -14,15 +14,19 @@ date
 curl -s http://instance-data/latest/meta-data/ami-id;echo;curl -s http://instance-data/latest/meta-data/instance-type;echo; curl -s http://instance-data/latest/meta-data/instance-id
 
 echo -n "******************************************************* " && date
+sudo service neo4j stop
+echo -n "******************************************************* " && date
 ./_generateData.sh 
 echo -n "******************************************************* " && date
 ./_importData.sh
 echo -n "******************************************************* " && date
+sudo service neo4j start
+echo -n "******************************************************* " && date
 
 
-#cd
-#cd poc-neo4j-stressTest/
-#./recreateIndexes.sh
+cd
+cd poc-neo4j-stressTest/matrixDb/
+./recreateIndexes.sh
 #echo -n "******************************************************* " && date
 
 touch zzz_ENDED_AT.log
