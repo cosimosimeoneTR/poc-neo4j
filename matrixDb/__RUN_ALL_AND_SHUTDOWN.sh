@@ -1,8 +1,8 @@
-touch STARTED_AT.log
+touch zzz_STARTED_AT.log
 
 ./_generateData.sh && ./_importData.sh
 
-touch ENDED_AT.log
+touch zzz_ENDED_AT.log
 
 sudo shutdown -h now
 
