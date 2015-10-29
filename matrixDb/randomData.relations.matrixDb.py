@@ -8,7 +8,7 @@ import pickle
 import string
 import gzip
 
-v_attribNum = 5
+v_attribNum = 2
 v_writeCommit = 700000
 
 
@@ -27,7 +27,7 @@ def printAttribsCnt ( p_attribNum ):
   retVal = ""
   for attribId in range(0,v_attribNum):
     #retVal = retVal+',attr'+str(attribId)+str(''.join(random.choice(string.lowercase) for i in range(10)) )
-    retVal = retVal+',attr'+str(attribId)+'_'+str( random.randint(1, 10) )
+    retVal = retVal+',attr'+str(attribId)+'_'+str( random.randint(0, 999999) )
   return retVal
 
 myString=""
