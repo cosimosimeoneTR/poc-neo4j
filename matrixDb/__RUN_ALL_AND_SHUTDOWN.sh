@@ -1,12 +1,12 @@
 set -x
 
 touch zzz_STARTED_AT.log
-cd
-cd poc-neo4j-import/
+#cd
+#cd poc-neo4j-import/
 git pull origin master
-cd
-cd poc-neo4j-stressTest/
-git pull origin master
+#cd
+#cd poc-neo4j-stressTest/
+#git pull origin master
 cd
 cd poc-neo4j-import/matrixDb/
 
@@ -20,10 +20,10 @@ echo -n "******************************************************* " && date
 echo -n "******************************************************* " && date
 
 
-cd
-cd poc-neo4j-stressTest/
-./recreateIndexes.sh
-echo -n "******************************************************* " && date
+#cd
+#cd poc-neo4j-stressTest/
+#./recreateIndexes.sh
+#echo -n "******************************************************* " && date
 
 touch zzz_ENDED_AT.log
 date
