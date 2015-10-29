@@ -1,12 +1,12 @@
 set -x
 
 touch zzz_STARTED_AT.log
-#cd
-#cd poc-neo4j-import/
+cd
+cd poc-neo4j-import/
 git pull origin master
-#cd
-#cd poc-neo4j-stressTest/
-#git pull origin master
+cd
+cd poc-neo4j-stressTest/
+git pull origin master
 cd
 cd poc-neo4j-import/matrixDb/
 
