@@ -9,7 +9,7 @@ import string
 import gzip
 
 v_attribNum = 2
-v_writeCommit = 700000
+v_writeCommit = 100000
 
 
 v_entityId  = sys.argv[1]
