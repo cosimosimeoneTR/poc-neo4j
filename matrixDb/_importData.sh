@@ -2,7 +2,7 @@ cd /mnt/dataDisk/matrix/
 sudo mkdir /mnt/databaseDisk/matrix.db 2>/dev/null
 sudo chown -R admin:admin /mnt/databaseDisk/matrix.db
 
-sudo rm -rf /mnt/databaseDisk/matrix.db/* && \
+#sudo rm -rf /mnt/databaseDisk/matrix.db/* && \
 neo4j-import --into /mnt/databaseDisk/matrix.db --id-type INTEGER \
   --nodes entityA.csv.gz \
   --nodes entityB.csv.gz \
@@ -21,11 +21,11 @@ neo4j-import --into /mnt/databaseDisk/matrix.db --id-type INTEGER \
   --relationships entityD2entityB.csv.gz \
   --relationships entityD2entityC.csv.gz \
   --relationships entityE2entityD.csv.gz \
-  --relationships entityF2entityE.csv.gz \
-  --relationships entityG2entityF.csv.gz \
-  --relationships entityH2entityG.csv.gz \
-  --relationships entityI2entityH.csv.gz \
-  --relationships entityJ2entityI.csv.gz 
+  --relationships /mnt/databaseDisk/matrix.db/entityF2entityE.csv.gz \
+  --relationships /mnt/databaseDisk/matrix.db/entityG2entityF.csv.gz \
+  --relationships /mnt/databaseDisk/matrix.db/entityH2entityG.csv.gz \
+  --relationships /mnt/databaseDisk/matrix.db/entityI2entityH.csv.gz \
+  --relationships /mnt/databaseDisk/matrix.db/entityJ2entityI.csv.gz 
 
 
 sudo chown -R neo4j:nogroup /mnt/databaseDisk/matrix.db
