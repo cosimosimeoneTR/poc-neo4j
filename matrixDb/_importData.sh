@@ -9,7 +9,6 @@ neo4j-import --into /mnt/databaseDisk/matrix.db --id-type INTEGER \
   --nodes entityC.csv.gz \
   --nodes entityD.csv.gz \
   --nodes entityE.csv.gz \
-  --relationships entityA2entityJ.csv.gz \
   --relationships entityB2entityA.csv.gz \
   --relationships entityB2entityD.csv.gz \
   --relationships entityC2entityB.csv.gz \
