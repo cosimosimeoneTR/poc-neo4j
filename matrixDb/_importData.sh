@@ -1,9 +1,19 @@
-cd /mnt/dataDisk/matrix/
-sudo mkdir /mnt/databaseDisk/matrix.db 2>/dev/null
-sudo chown -R admin:admin /mnt/databaseDisk/matrix.db
+export dataDir=$1
+export databaseDir=$2
 
-sudo rm -rf /mnt/databaseDisk/matrix.db/messages.log /mnt/databaseDisk/matrix.db/neostore* /mnt/databaseDisk/matrix.db/schema/ /mnt/databaseDisk/matrix.db/bad.log && \
-neo4j-import --into /mnt/databaseDisk/matrix.db --id-type INTEGER \
+if [ $# -ne 2 ]; then
+   echo "Please pass data dir and database dir as parameter"
+   exit 1
+fi
+
+cd $dataDir
+sudo mkdir $databaseDir 2>/dev/null
+sudo chown -R admin:admin $databaseDir
+
+sudo rm -rf $databaseDir/messages.log $databaseDir/neostore* $databaseDir/schema/ $databaseDir/bad.log
+
+
+neo4j-import --into $databaseDir --id-type INTEGER \
   --nodes entityA.csv.gz \
   --nodes entityB.csv.gz \
   --nodes entityC.csv.gz \
@@ -17,4 +27,4 @@ neo4j-import --into /mnt/databaseDisk/matrix.db --id-type INTEGER \
   --relationships entityE2entityD.csv.gz 
 
 
-sudo chown -R neo4j:nogroup /mnt/databaseDisk/matrix.db
+sudo chown -R neo4j:nogroup $databaseDir

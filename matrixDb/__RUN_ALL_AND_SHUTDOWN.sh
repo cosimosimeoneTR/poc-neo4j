@@ -1,14 +1,14 @@
 set -x
 
 touch zzz_STARTED_AT.log
-cd
-cd poc-neo4j-import/
-git pull origin master
-cd
-cd poc-neo4j-stressTest/
-git pull origin master
-cd
-cd poc-neo4j-import/matrixDb/
+#cd
+#cd poc-neo4j-import/
+#git pull origin master
+#cd
+#cd poc-neo4j-stressTest/
+#git pull origin master
+#cd
+#cd poc-neo4j-import/matrixDb/
 
 date
 curl -s http://instance-data/latest/meta-data/ami-id;echo;curl -s http://instance-data/latest/meta-data/instance-type;echo; curl -s http://instance-data/latest/meta-data/instance-id
@@ -16,9 +16,9 @@ curl -s http://instance-data/latest/meta-data/ami-id;echo;curl -s http://instanc
 echo -n "******************************************************* " && date
 sudo service neo4j stop
 echo -n "******************************************************* " && date
-./_generateData.sh 
+./_generateData.sh $1
 echo -n "******************************************************* " && date
-./_importData.sh
+./_importData.sh $1 $2
 echo -n "******************************************************* " && date
 sudo service neo4j start
 echo -n "******************************************************* " && date
