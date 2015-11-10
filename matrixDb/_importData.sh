@@ -6,6 +6,8 @@ if [ $# -ne 2 ]; then
    exit 1
 fi
 
+date
+
 cd $dataDir
 sudo mkdir $databaseDir 2>/dev/null
 sudo chown -R admin:admin $databaseDir
@@ -24,7 +26,13 @@ neo4j-import --into $databaseDir --id-type INTEGER \
   --relationships entityC2entityB.csv.gz \
   --relationships entityD2entityB.csv.gz \
   --relationships entityD2entityC.csv.gz \
-  --relationships entityE2entityD.csv.gz 
+  --relationships entityE2entityD.csv.gz    &
 
+pid="$!"
+
+sudo renice -20 $pid
+wait $pid
 
 sudo chown -R neo4j:nogroup $databaseDir
+echo IMPORT DONE
+date
