@@ -28,6 +28,7 @@ pids="$pids $!"
 #nohup ./randomData.entities.matrixDb.py  H        200000000   $dataDir  >> `basename $0`.log  2>&1  &
 #pids="$pids $!"
 
+#sudo renice -20 $pids
 #wait $pids
 #export pids=""
 
@@ -42,8 +43,9 @@ pids="$pids $!"
 nohup ./randomData.relations.matrixDb.py  C   B   200000000   $dataDir  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
 
-wait $pids
-export pids=""
+#sudo renice -20 $pids
+#wait $pids
+#export pids=""
 
 nohup ./randomData.relations.matrixDb.py  D   C   200000000   $dataDir  >> `basename $0`.log  2>&1  &
 pids="$pids $!"
@@ -60,6 +62,7 @@ pids="$pids $!"
 #nohup ./randomData.relations.matrixDb.py  J   I   200000000   $dataDir  >> `basename $0`.log  2>&1  &
 #pids="$pids $!"
 
+#sudo renice -20 $pids
 #wait $pids
 #export pids=""
 
@@ -70,5 +73,6 @@ pids="$pids $!"
 
 
 
+sudo renice -20 $pids
 wait $pids
 export pids=""
