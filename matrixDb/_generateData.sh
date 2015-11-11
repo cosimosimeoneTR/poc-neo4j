@@ -7,7 +7,7 @@ fi
 
 
 mkdir $dataDir 2>/dev/null 
-rm -rf $dataDir/*z
+#rm -rf $dataDir/*z
 
 export pids=""
 
