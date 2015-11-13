@@ -8,7 +8,7 @@ fi
 
 date
 
-export logFileName=$dataDir/`basename $0`_`date +%Y%m%d_%H%M%S`.log
+export logFileName=$databaseDir/`basename $0`_`date +%Y%m%d_%H%M%S`.log
 
 curl -s http://instance-data/latest/meta-data/ami-id           >> $logFileName
 curl -s http://instance-data/latest/meta-data/instance-type    >> $logFileName
