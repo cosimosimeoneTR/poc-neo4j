@@ -25,5 +25,6 @@ neo4j-shell -c "create constraint on (e:protein                    ) assert e.id
 neo4j-shell -c "create constraint on (e:target                     ) assert e.id is unique;"
 neo4j-shell -c "create constraint on (e:toxicity                   ) assert e.id is unique;"
 
+neo4j-shell -c "schema ls"
 
 #watch 'date;neo4j-shell -c "schema ls"'
