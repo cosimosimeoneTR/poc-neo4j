@@ -8,7 +8,9 @@ fi
 
 date
 
-export logFileName=$databaseDir/`basename $0`_`date +%Y%m%d_%H%M%S`.log
+export logFileName=$databaseDir`basename $0`_`date +%Y%m%d_%H%M%S`.log
+
+sudo chown -R admin:admin $databaseDir
 
 curl -s http://instance-data/latest/meta-data/ami-id           >> $logFileName
 curl -s http://instance-data/latest/meta-data/instance-type    >> $logFileName
@@ -17,7 +19,6 @@ curl -s http://instance-data/latest/meta-data/instance-id      >> $logFileName
 
 cd $dataDir
 sudo mkdir $databaseDir 2>/dev/null
-sudo chown -R admin:admin $databaseDir
 
 sudo cp $databaseDir/messages.log $databaseDir/messages_PRE`date +%Y%m%d_%H%M%S`.log
 sudo rm -rf $databaseDir/messages.log $databaseDir/neostore* $databaseDir/schema/ $databaseDir/bad.log
