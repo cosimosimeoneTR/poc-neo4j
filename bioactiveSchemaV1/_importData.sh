@@ -86,13 +86,14 @@ neo4j-import          \
   --relationships   protein2protein.csv.gz                                 \
   --relationships   protein2target.csv.gz                                  \
   --relationships   target2target.csv.gz                                   \
-  &
+  >> $logFileName 2>&1
 
-pid="$!"
+#pid="$!"
 
-sudo renice -20 $pid
-wait $pid
+#sudo renice -20 $pid
+#wait $pid
 
+echo "chown-ing..."
 sudo chown -R neo4j:nogroup $databaseDir
 echo IMPORT DONE
 date
