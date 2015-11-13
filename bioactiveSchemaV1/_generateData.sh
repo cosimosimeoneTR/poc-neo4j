@@ -11,6 +11,10 @@ fi
 
 export logFileName=$dataDir/`basename $0`_`date +%Y%m%d_%H%M%S`.log
 
+curl -s http://instance-data/latest/meta-data/ami-id           >> $logFileName
+curl -s http://instance-data/latest/meta-data/instance-type    >> $logFileName
+curl -s http://instance-data/latest/meta-data/instance-id      >> $logFileName
+
 
 mkdir $dataDir 2>/dev/null
 #rm -rf $dataDir/*z
