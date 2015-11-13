@@ -19,7 +19,7 @@ cd $dataDir
 sudo mkdir $databaseDir 2>/dev/null
 sudo chown -R admin:admin $databaseDir
 
-cp $databaseDir/messages.log $databaseDir/messages_PRE`date +%Y%m%d_%H%M%S`.log
+sudo cp $databaseDir/messages.log $databaseDir/messages_PRE`date +%Y%m%d_%H%M%S`.log
 sudo rm -rf $databaseDir/messages.log $databaseDir/neostore* $databaseDir/schema/ $databaseDir/bad.log
 
 
