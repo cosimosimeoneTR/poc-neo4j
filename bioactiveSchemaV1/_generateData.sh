@@ -40,8 +40,6 @@ pids="$pids $!";  nohup ./randomData.entities.matrixDb.py   toxicity            
 
 pids="$pids $!";  sudo renice -20 $pids;wait $pids;export pids=""
 
-
-
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         drugdruginteraction       $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
@@ -58,6 +56,9 @@ pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse      
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    clinicalstudies                   bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    clinicalstudies                   conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    drugdruginteraction               bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+
+pids="$pids $!";  sudo renice -20 $pids;wait $pids;export pids=""
+
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    drugdruginteraction               toxicity                  $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalmodel                 bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalmodel                 conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
@@ -76,6 +77,9 @@ pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    gene              
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    genevariant                       bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    genevariant                       conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    genevariant                       toxicity                  $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+
+pids="$pids $!";  sudo renice -20 $pids;wait $pids;export pids=""
+
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    organization                      bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    organization                      bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    organization                      patent                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
@@ -86,7 +90,6 @@ pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    protein           
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    protein                           protein                   $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    protein                           target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    target                            target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-
 
 pids="$pids $!";  sudo renice -20 $pids;wait $pids;export pids=""
 
