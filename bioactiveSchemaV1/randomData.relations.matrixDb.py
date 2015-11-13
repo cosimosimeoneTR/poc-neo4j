@@ -34,7 +34,8 @@ myString=""
 fileOut = gzip.open(v_path+str(v_startEntityId)+'2'+str(v_endEntityId)+'.csv.gz', 'wb')
 fileOut.write(':START_ID('+str(v_startEntityId)+'),:END_ID('+str(v_endEntityId)+'),:TYPE,relationType'+printAttribsHead ( v_attribNum ) +'\n')
 for loopId in range(1,v_rowNums):
-  relationType='Relation'+str( (loopId%v_relationTypeNum)+1 )
+  if v_relationTypeNum !=0: relationType='Relation'+str( (loopId%v_relationTypeNum)+1 )
+  else: relationType='Relation'
   #myString=myString+(str(loopId)+','+str( random.randint(1 , ((loopId + 10) % (v_rowNums-5) )+1  ) ) +','+str(v_startEntityId)+'2'+str(v_endEntityId)+','+relationType +printAttribsCnt ( v_attribNum ) +'\n')
   myString=myString+(str(loopId)+','+str( random.randint(1 , ((loopId + 10) % (v_rowNums-5) )+1  ) ) +','+str(v_startEntityId)+'2'+str(v_endEntityId)+','+relationType +fixedAttribs +'\n')
   if loopId % v_writeCommit:

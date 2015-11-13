@@ -35,6 +35,7 @@ fileOut = gzip.open(v_path+str(v_entityId)+'.csv.gz', 'wb')
 fileOut.write('id:ID('+str(v_entityId)+'),:LABEL,entityName'+printAttribsHead ( v_attribNum ) +'\n')
 for loopId in range(1,v_rowNums+1):
 
+
   #myString=myString+(str(loopId)+','+str(v_entityId)+','+str(v_entityId)+'_'+str(loopId)+printAttribsCnt ( v_attribNum ) +'\n')
   myString=myString+(str(loopId)+','+str(v_entityId)+','+str(v_entityId)+'_'+str(loopId)+ fixedAttribs +'\n')
   if loopId % v_writeCommit:
