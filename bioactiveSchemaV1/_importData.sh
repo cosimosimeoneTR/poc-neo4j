@@ -13,8 +13,11 @@ export logFileName=$databaseDir`basename $0`_`date +%Y%m%d_%H%M%S`.log
 sudo chown -R admin:admin $databaseDir
 
 curl -s http://instance-data/latest/meta-data/ami-id           >> $logFileName
+echo                                                           >> $logFileName
 curl -s http://instance-data/latest/meta-data/instance-type    >> $logFileName
+echo                                                           >> $logFileName
 curl -s http://instance-data/latest/meta-data/instance-id      >> $logFileName
+echo                                                           >> $logFileName
 
 
 cd $dataDir
