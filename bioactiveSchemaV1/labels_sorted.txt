@@ -1,0 +1,62 @@
+---- nodes
+bioactive
+biomarker
+biomarkeruse
+clinicalstudies
+conditiondesease
+drugdruginteraction
+experimentalmodel
+experimentalpharmacology
+gene
+genevariant
+organization
+patent
+pharmacokinetics
+protein
+target
+toxicity
+---- relations
+bioactive bioactive
+bioactive conditiondesease
+bioactive drugdruginteraction
+bioactive target
+biomarker biomarker
+biomarker biomarkeruse
+biomarker gene
+biomarker protein
+biomarkeruse bioactive
+biomarkeruse biomarkeruse
+biomarkeruse conditiondesease
+biomarkeruse genevariant
+biomarkeruse toxicity
+clinicalstudies bioactive
+clinicalstudies conditiondesease
+drugdruginteraction bioactive
+drugdruginteraction toxicity
+experimentalmodel bioactive
+experimentalmodel conditiondesease
+experimentalmodel target
+experimentalmodel toxicity
+experimentalpharmacology bioactive
+experimentalpharmacology biomarkeruse
+experimentalpharmacology conditiondesease
+experimentalpharmacology experimentalmodel
+experimentalpharmacology target
+experimentalpharmacology toxicity
+gene gene
+gene genevariant
+gene protein
+gene target
+genevariant bioactive
+genevariant conditiondesease
+genevariant toxicity
+organization bioactive
+organization bioactive
+organization patent
+patent bioactive
+patent target
+pharmacokinetics bioactive
+protein gene
+protein protein
+protein target
+target target
