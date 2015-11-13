@@ -1,6 +1,9 @@
 curl -s http://instance-data/latest/meta-data/ami-id
+echo
 curl -s http://instance-data/latest/meta-data/instance-type
+echo
 curl -s http://instance-data/latest/meta-data/instance-id
+echo
 set -x
 date
 sudo service neo4j restart
