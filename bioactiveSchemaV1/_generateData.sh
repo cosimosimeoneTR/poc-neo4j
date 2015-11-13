@@ -4,12 +4,12 @@ export rowNums=$2
 export attribNums=$3
 export writeCommit=$4
 
-if [ $# -ne 3 ]; then
+if [ $# -ne 4 ]; then
    echo "Please pass path where you want files to be created,  row numbers, attrib numbers, and write commit"
    exit 1
 fi
 
-export logFileName=`basename $0`_`date +%Y%m%d_%H%M%S`.log
+export logFileName=$dataDir/`basename $0`_`date +%Y%m%d_%H%M%S`.log
 
 
 mkdir $dataDir 2>/dev/null
