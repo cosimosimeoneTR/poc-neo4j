@@ -81,7 +81,6 @@ neo4j-import          \
   --relationships   genevariant2conditiondesease.csv.gz                    \
   --relationships   genevariant2toxicity.csv.gz                            \
   --relationships   organization2bioactive.csv.gz                          \
-  --relationships   organization2bioactive.csv.gz                          \
   --relationships   organization2patent.csv.gz                             \
   --relationships   patent2bioactive.csv.gz                                \
   --relationships   patent2target.csv.gz                                   \
