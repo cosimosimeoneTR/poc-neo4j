@@ -24,3 +24,5 @@ neo4j-shell -c "drop constraint on (e:toxicity                   ) assert e.id i
 
 
 #watch 'date;neo4j-shell -c "schema ls"'
+
+date

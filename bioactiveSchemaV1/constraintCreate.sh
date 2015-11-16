@@ -1,3 +1,5 @@
+date
+
 curl -s http://instance-data/latest/meta-data/ami-id
 echo
 curl -s http://instance-data/latest/meta-data/instance-type
@@ -28,3 +30,5 @@ neo4j-shell -c "create constraint on (e:toxicity                   ) assert e.id
 neo4j-shell -c "schema ls"
 
 #watch 'date;neo4j-shell -c "schema ls"'
+
+date
