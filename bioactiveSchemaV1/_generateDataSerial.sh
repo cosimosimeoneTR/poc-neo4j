@@ -93,7 +93,7 @@ pids="$pids $!";   ./randomData.relations.matrixDb.py    genevariant            
 #pids="$pids $!";  sudo renice -20 $pids;wait $pids;export pids=""
 
 pids="$pids $!";   ./randomData.relations.matrixDb.py    organization                      bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  
-pids="$pids $!";   ./randomData.relations.matrixDb.py    organization                      bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  
+####pids="$pids $!";   ./randomData.relations.matrixDb.py    organization                      bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  
 pids="$pids $!";   ./randomData.relations.matrixDb.py    organization                      patent                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  
 pids="$pids $!";   ./randomData.relations.matrixDb.py    patent                            bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  
 pids="$pids $!";   ./randomData.relations.matrixDb.py    patent                            target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  
