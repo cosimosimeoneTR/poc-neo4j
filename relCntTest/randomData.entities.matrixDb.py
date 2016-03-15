@@ -24,8 +24,8 @@ def printAttribsCnt ( p_attribNum ):
   retVal = ""
   for attribId in range(0,v_attribNum):
     #retVal = retVal+',attr'+str(attribId)+str(''.join(random.choice(string.lowercase) for i in range(10)) )
-    #retVal = retVal+',attr'+str(attribId)+'_'+str( random.randint(0, 9999) )
-    retVal = retVal+',attr'+str(attribId)+'_blaBlaBla'
+    retVal = retVal+',attr'+str(attribId)+'_'+str( random.randint(0, 9999) )
+    #retVal = retVal+',attr'+str(attribId)+'_blaBlaBla'
   return retVal
 
 fixedAttribs=printAttribsCnt ( v_attribNum )
@@ -36,8 +36,8 @@ fileOut.write('id:ID('+str(v_entityId)+'),:LABEL,entityName'+printAttribsHead ( 
 for loopId in range(1,v_rowNums+1):
 
 
-  #myString=myString+(str(loopId)+','+str(v_entityId)+','+str(v_entityId)+'_'+str(loopId)+printAttribsCnt ( v_attribNum ) +'\n')
-  myString=myString+(str(loopId)+','+str(v_entityId)+','+str(v_entityId)+'_'+str(loopId)+ fixedAttribs +'\n')
+  myString=myString+(str(loopId)+','+str(v_entityId)+','+str(v_entityId)+'_'+str(loopId)+printAttribsCnt ( v_attribNum ) +'\n')
+  #myString=myString+(str(loopId)+','+str(v_entityId)+','+str(v_entityId)+'_'+str(loopId)+ fixedAttribs +'\n')
   if loopId % v_writeCommit:
     fileOut.write(myString)
     myString=""
