@@ -1,0 +1,27 @@
+sudo rm -rf /mnt/databaseDisk/TBC/*
+
+sudo chown -R admin:admin /mnt/databaseDisk/TBC
+
+
+neo4j-import          \
+  --into /mnt/databaseDisk/TBC \
+  --id-type ACTUAL   \
+  --nodes bioactives.csv.sort.gz     \
+  --nodes condition.csv.sort.gz      \
+  --nodes target.csv.sort.gz         \
+  --relationships condition2condition.csv.sort.gz     \
+  --relationships target2bioactive.csv.sort.gz        \
+  --relationships target2condition.csv.sort.gz        \
+
+sudo chown -R neo4j:nogroup /mnt/databaseDisk/TBC
+
+sudo chown -R neo4j:nogroup /mnt/databaseDisk/TBC
+
+sudo service neo4j restart
+
+neo4j-shell -c "create constraint on (e:bioactive                  ) assert e.id is unique;"
+neo4j-shell -c "create constraint on (e:target                  ) assert e.id is unique;"
+neo4j-shell -c "create constraint on (e:condition                  ) assert e.id is unique;"
+neo4j-shell -c "schema ls"
+
+

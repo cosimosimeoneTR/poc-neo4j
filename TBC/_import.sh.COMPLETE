@@ -1,0 +1,16 @@
+sudo chown -R admin:admin /mnt/databaseDisk/TBC
+
+
+neo4j-import          \
+  --into /mnt/databaseDisk/TBC \
+--multiline-fields=true \
+  --id-type INTEGER   \
+  --nodes bioactives.csv.gz     \
+  --nodes condition.csv.gz      \
+  --nodes target.csv.gz         \
+  --relationships condition2condition.csv.gz     \
+  --relationships target2bioactive.csv.gz        \
+  --relationships target2condition.csv.gz        \
+
+sudo chown -R neo4j:nogroup /mnt/databaseDisk/TBC
+
