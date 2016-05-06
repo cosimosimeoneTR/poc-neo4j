@@ -4,7 +4,7 @@ sudo chown -R admin:admin /mnt/databaseDisk/TBC
 
 
 neo4j-import          \
-  --into /mnt/databaseDisk/TBC \
+  --into /mnt/databaseDisk/databases/TBC \
   --id-type integer   \
   --nodes bioactives.csv.gz     \
   --nodes condition.csv.gz      \
