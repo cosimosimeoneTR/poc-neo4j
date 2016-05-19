@@ -8,3 +8,5 @@ echo
 ./_generateData.sh  /mnt/dataDisk/bioactiveSchemaV1/    2000000    0    50000                        &&
 ./_importData.sh    /mnt/dataDisk/bioactiveSchemaV1/    /mnt/databaseDisk/bioactiveSchemaV1/         &&
 ./constraintCreate.sh
+
+sudo shutdown -h now

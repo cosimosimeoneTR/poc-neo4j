@@ -40,56 +40,56 @@ pids="$pids $!";  nohup ./randomData.entities.matrixDb.py   toxicity            
 
 pids="$pids $!";  sudo renice -20 $pids;wait $pids;export pids=""
 
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         drugdruginteraction       $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarker                         biomarker                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarker                         biomarkeruse              $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarker                         gene                      $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarker                         protein                   $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      biomarkeruse              $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      genevariant               $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      toxicity                  $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    clinicalstudies                   bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    clinicalstudies                   conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    drugdruginteraction               bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         bioactive                 $rowNums  $attribNums  2  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         conditiondesease          $rowNums  $attribNums  3  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         drugdruginteraction       $rowNums  $attribNums  2  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    bioactive                         target                    $rowNums  $attribNums  5  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarker                         biomarker                 $rowNums  $attribNums  8  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarker                         biomarkeruse              $rowNums  $attribNums  6  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarker                         gene                      $rowNums  $attribNums  7  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarker                         protein                   $rowNums  $attribNums  2  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      bioactive                 $rowNums  $attribNums  5  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      biomarkeruse              $rowNums  $attribNums  9  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      conditiondesease          $rowNums  $attribNums  8  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      genevariant               $rowNums  $attribNums  6  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    biomarkeruse                      toxicity                  $rowNums  $attribNums  5  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    clinicalstudies                   bioactive                 $rowNums  $attribNums  4  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    clinicalstudies                   conditiondesease          $rowNums  $attribNums  2  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    drugdruginteraction               bioactive                 $rowNums  $attribNums  2  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 
 pids="$pids $!";  sudo renice -20 $pids;wait $pids;export pids=""
 
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    drugdruginteraction               toxicity                  $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    drugdruginteraction               toxicity                  $rowNums  $attribNums  2  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalmodel                 bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalmodel                 conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalmodel                 target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalmodel                 toxicity                  $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          biomarkeruse              $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          experimentalmodel         $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          toxicity                  $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    gene                              gene                      $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    gene                              genevariant               $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    gene                              protein                   $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    gene                              target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    genevariant                       bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    genevariant                       conditiondesease          $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    genevariant                       toxicity                  $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalmodel                 conditiondesease          $rowNums  $attribNums  5  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalmodel                 target                    $rowNums  $attribNums  8  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalmodel                 toxicity                  $rowNums  $attribNums  4  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          bioactive                 $rowNums  $attribNums  2  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          biomarkeruse              $rowNums  $attribNums  5  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          conditiondesease          $rowNums  $attribNums  7  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          experimentalmodel         $rowNums  $attribNums  4  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          target                    $rowNums  $attribNums  3  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    experimentalpharmacology          toxicity                  $rowNums  $attribNums  3  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    gene                              gene                      $rowNums  $attribNums  6  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    gene                              genevariant               $rowNums  $attribNums  5  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    gene                              protein                   $rowNums  $attribNums  2  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    gene                              target                    $rowNums  $attribNums  8  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    genevariant                       bioactive                 $rowNums  $attribNums  9  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    genevariant                       conditiondesease          $rowNums  $attribNums  4  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    genevariant                       toxicity                  $rowNums  $attribNums  6  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 
 pids="$pids $!";  sudo renice -20 $pids;wait $pids;export pids=""
 
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    organization                      bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    organization                      bioactive                 $rowNums  $attribNums  3  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 #####pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    organization                      bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    organization                      patent                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    patent                            bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    patent                            target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    pharmacokinetics                  bioactive                 $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    protein                           gene                      $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    protein                           protein                   $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    protein                           target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
-pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    target                            target                    $rowNums  $attribNums  0  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    organization                      patent                    $rowNums  $attribNums  4  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    patent                            bioactive                 $rowNums  $attribNums  5  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    patent                            target                    $rowNums  $attribNums  2  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    pharmacokinetics                  bioactive                 $rowNums  $attribNums  4  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    protein                           gene                      $rowNums  $attribNums  8  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    protein                           protein                   $rowNums  $attribNums  6  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    protein                           target                    $rowNums  $attribNums  7  $writeCommit  $dataDir  >> $logFileName  2>&1  &
+pids="$pids $!";  nohup ./randomData.relations.matrixDb.py    target                            target                    $rowNums  $attribNums  8  $writeCommit  $dataDir  >> $logFileName  2>&1  &
 
 pids="$pids $!";  sudo renice -20 $pids;wait $pids;export pids=""
 
